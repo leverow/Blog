@@ -5,10 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-
 builder.Services.AddDbContext<ApplicationDbContext>(options
 => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
+
+var app = builder.Build();
+
 
 if (!app.Environment.IsDevelopment())
 {
