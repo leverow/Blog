@@ -1,8 +1,14 @@
+using Blog.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options
+=> options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 if (!app.Environment.IsDevelopment())
 {

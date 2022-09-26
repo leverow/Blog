@@ -6,4 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="microsoft.aspnetcore.identity.entityframeworkcore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.entityframeworkcore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.entityframeworkcore.design" Version="6.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="npgsql.entityframeworkcore.postgresql" Version="6.0.7" />
+  </ItemGroup>
+
 </Project>
