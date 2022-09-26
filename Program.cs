@@ -18,6 +18,9 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+
 var app = builder.Build();
 
 
