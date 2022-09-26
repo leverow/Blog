@@ -7,7 +7,7 @@ namespace Blog.Entity;
 public class Article
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public long Id { get; set; }
+    public ulong Id { get; set; }
     public string Title { get; set; }
     public string Content { get; set; }
     public string Image { get; set; }
