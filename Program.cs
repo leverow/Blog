@@ -1,4 +1,5 @@
 using Blog.Data;
+using Blog.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +18,6 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
     })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
-
 var app = builder.Build();
 
 
